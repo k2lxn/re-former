@@ -2,6 +2,7 @@
 
 <h1>Create an Account</h1>
 
+<!-- Plain HTML version, for reference
 <form accept-charset="UTF-8" action="/users" method="post" >
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 	
@@ -16,6 +17,19 @@
 	
 	<input type="submit">
 </form>
+-->
 
+<%= form_for(@user) do |f| %>
+	<%= f.label :username %>
+	<%= f.text_field :username %>
+	
+	<%= f.label :email, "Email address" %>
+	<%= f.text_field :email %>
+	
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+	
+	<%= f.submit "Submit" %>
+<%end%>
 
 </div>
