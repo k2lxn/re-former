@@ -1,0 +1,18 @@
+<div class="user">
+
+<h1>Sign up</h1>
+
+<%= form_for(@user) do |f| %>
+	<%= f.label :username %>
+	<%= f.text_field :username, placeholder: "Jane Doe" %>
+	
+	<%= f.label :email, "Email address" %>
+	<%= f.text_field :email, placeholder: "jane@example.com" %>
+	
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+	
+	<%= f.submit "Submit" %>
+<%end%>
+
+</div>
